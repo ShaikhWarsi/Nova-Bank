@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUsers, faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
@@ -98,7 +99,7 @@ function RegisterPage() {
               href="/"
               className="text-2xl font-extrabold text-[#FD5339] flex items-center"
             >
-              <img src="./logo.png" alt="Logo" width={40} /> NOVA
+              <Image src="/logo.png" alt="Logo" width={40} height={40} /> NOVA
             </Link>
           </div>
 

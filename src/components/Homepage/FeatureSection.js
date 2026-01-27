@@ -1,6 +1,7 @@
 "use client";
 import React, { useState, useRef } from "react";
 import { motion, useInView, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown, faChevronUp } from "@fortawesome/free-solid-svg-icons";
 import { MdLock } from "react-icons/md";
@@ -173,9 +174,11 @@ function FeatureSection() {
             </motion.button>
           </div>
           <div className="flex items-end z-10">
-            <img
+            <Image
               src="/FeatureSection_Image1.png"
               alt="Feature showcasing online banking"
+              width={208}
+              height={150}
               className="rounded-xl w-52 max-sm:hidden"
             />
           </div>
@@ -327,14 +330,18 @@ function FeatureSection() {
         </div>
 
         <div className="flex flex-col sm:flex-row gap-6 w-full justify-center mt-10">
-          <img
+          <Image
             src="/FeatureSection_Image2.png"
             alt="Feature Image 2"
+            width={300}
+            height={256}
             className="h-48 sm:h-64 object-contain"
           />
-          <img
+          <Image
             src="/FeatureSection_Image3.png"
             alt="Feature Image 3"
+            width={300}
+            height={256}
             className="h-48 sm:h-64 object-contain max-sm:hidden"
           />
         </div>

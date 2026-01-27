@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import Image from "next/image";
 import CountUp from "react-countup";
 import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
@@ -21,9 +22,11 @@ function StatsSection() {
         transition={{ duration: 20, repeat: Infinity, ease: "easeInOut" }}
       />
 
-      <img
+      <Image
         src="/StatsSection_Image1.png"
         alt="Stats Visual"
+        width={600}
+        height={400}
         className="w-full lg:w-1/2 object-contain relative z-10"
       />
 
@@ -60,13 +63,13 @@ function StatsSection() {
             whileTap={{ scale: 0.95 }}
             className="flex gap-2 border border-gray-300 dark:border-gray-700 rounded-full px-4 py-2 items-center text-lg transition-all duration-200 dark:text-white"
           >
-            <img src="/Arrow.png" alt="Arrow" className="w-6 dark:invert" />
+            <Image src="/Arrow.png" alt="Arrow" width={24} height={24} className="dark:invert" />
             <span>Learn More</span>
           </motion.button>
         </div>
 
         <div className="mt-8">
-          <img src="/StatsSection_Image2.png" alt="Stats Graph" className="w-full dark:invert" />
+          <Image src="/StatsSection_Image2.png" alt="Stats Graph" width={600} height={300} className="w-full dark:invert" />
 
           <motion.div
             initial={{ opacity: 0 }}

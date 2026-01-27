@@ -1,5 +1,6 @@
 "use client"
 import React from "react";
+import Image from "next/image";
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import { usePathname } from "next/navigation";
 function Footer() {
@@ -12,11 +13,13 @@ function Footer() {
         <div className="md:flex md:justify-between">
           <div>
             <div className="mb-6 md:mb-0 flex gap-2 h-8 items-center">
-              <img src="/logo.png" alt="logo" className="w-8" />
-              <img
+              <Image src="/logo.png" alt="logo" width={32} height={32} />
+              <Image
                 src="/logo_heading.png"
                 alt="logo_heading"
-                className="w-16 h-6 dark:invert"
+                width={64}
+                height={24}
+                className="dark:invert"
               />
             </div>
             <div className="w-64 text-sm text-gray-400 dark:text-gray-500 mt-6">

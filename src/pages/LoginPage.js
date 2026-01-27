@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useAuth } from "../../context/authContext";
 import { toast, Toaster } from "react-hot-toast";
@@ -90,7 +91,7 @@ function LoginPage() {
               href="/"
               className="text-2xl font-extrabold text-[#FD5339] flex items-center"
             >
-              <img src="./logo.png" alt="Logo" width={40} /> NOVA
+              <Image src="/logo.png" alt="Logo" width={40} height={40} /> NOVA
             </Link>
           </div>
           <div className="mt-0 flex flex-col items-center">

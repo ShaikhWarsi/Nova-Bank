@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from "react";
+import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
@@ -134,9 +135,11 @@ function SolutionSection() {
                 </div>
               </div>
               <div className="flex justify-center">
-                <img
+                <Image
                   src={card.image}
                   alt={card.title}
+                  width={200}
+                  height={112}
                   className="mt-4 rounded-xl max-h-28 object-contain dark:invert"
                 />
               </div>
@@ -166,7 +169,7 @@ function SolutionSection() {
           onClick={handleGetStarted}
           className="flex gap-2 max-sm:m-auto border border-gray-300 dark:border-gray-700 rounded-full px-4 py-1 items-center text-lg transition-all duration-200 dark:text-white"
         >
-          <img src="/Arrow.png" alt="Arrow" className="w-8 dark:invert" />
+          <Image src="/Arrow.png" alt="Arrow" width={32} height={32} className="dark:invert" />
           <div>Get Started</div>
         </motion.button>
       </motion.div>
