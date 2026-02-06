@@ -1,4 +1,4 @@
-import ResetPasswordPage from "@/pages/ResetPasswordPage"
+import ResetPasswordPage from "@/components/ResetPasswordPage"
 import { Suspense } from "react"
 
 function page() {

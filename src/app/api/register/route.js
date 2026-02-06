@@ -1,10 +1,10 @@
-import dbConnect from '../../../../utils/dbConnect';
-import User from '../../../../models/User';
-import OTP from '../../../../models/OTP';
+import dbConnect from '@/utils/dbConnect';
+import User from '@/models/User';
+import OTP from '@/models/OTP';
 import bcrypt from 'bcrypt';
 import { NextResponse } from 'next/server';
 import { serialize } from 'cookie';
-import { sendOTPEmail } from '../../../../utils/emailService';
+import { sendOTPEmail } from '@/utils/emailService';
 
 function generateOTP() {
   return Math.floor(100000 + Math.random() * 900000).toString();

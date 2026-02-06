@@ -5,7 +5,7 @@ import { useRouter, usePathname } from "next/navigation";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 import Cookies from 'js-cookie';
-import { useAuth } from "../../context/authContext";
+import { useAuth } from "@/context/authContext";
 import Link from "next/link";
 import { ThemeToggle } from "./ThemeToggle";
 
@@ -50,6 +50,7 @@ function Navbar() {
 
   const isRegister = pathname && pathname.startsWith("/register");
   const isLogin = pathname && pathname.startsWith("/login");
+  const isDashboard = pathname && pathname.startsWith("/dashboard");
 
   const menuVariants = {
     open: { opacity: 1, x: 0 },
@@ -57,7 +58,7 @@ function Navbar() {
   };
 
   return (
-    <div className={`fixed top-0 left-0 w-full bg-white dark:bg-black dark:border-b dark:border-gray-800 z-50 py-6 px-4 lg:px-16 ${isLogin || isRegister ? "hidden" : "block"}`}>
+    <div className={`fixed top-0 left-0 w-full bg-white dark:bg-black dark:border-b dark:border-gray-800 z-50 py-6 px-4 lg:px-16 ${isLogin || isRegister || isDashboard ? "hidden" : "block"}`}>
       <div className="flex justify-between items-center">
         <div className="flex items-center gap-2 cursor-pointer" onClick={() => router.push("/")}>
           <Image src="/logo.png" alt="logo" width={32} height={32} />

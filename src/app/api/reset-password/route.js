@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server';
 import crypto from 'crypto';
-import dbConnect from '../../../../utils/dbConnect';
-import User from '../../../../models/User';
+import dbConnect from '@/utils/dbConnect';
+import User from '@/models/User';
 
 export async function POST(req) {
   try {

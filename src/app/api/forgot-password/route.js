@@ -1,8 +1,8 @@
 import { NextResponse } from 'next/server';
 import crypto from 'crypto';
-import dbConnect from '../../../../utils/dbConnect';
-import User from '../../../../models/User';
-import { sendPasswordResetEmail } from '../../../../utils/emailService';
+import dbConnect from '@/utils/dbConnect';
+import User from '@/models/User';
+import { sendPasswordResetEmail } from '@/utils/emailService';
 
 export async function POST(req) {
   try {

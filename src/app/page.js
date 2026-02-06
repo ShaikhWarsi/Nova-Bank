@@ -1,5 +1,5 @@
 "use client";
-import Homepage from "@/pages/Homepage";
+import Homepage from "@/components/Homepage";
 import FloatingChatButton from "@/components/Chatbot/FloatingChatButton";
 
 export default function Home() {
