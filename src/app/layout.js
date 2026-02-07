@@ -1,4 +1,3 @@
-import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -22,9 +21,10 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+  console.log("Rendering RootLayout");
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className="transition-colors duration-300">
+      <body className="min-h-screen bg-background text-foreground transition-colors duration-300 antialiased">
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
@@ -32,9 +32,13 @@ export default function RootLayout({ children }) {
           disableTransitionOnChange
         >
           <AuthProvider>
-            <Navbar />
-            {children}
-            <Footer />
+            <div className="flex flex-col min-h-screen">
+              <Navbar />
+              <main className="flex-grow relative z-0">
+                {children}
+              </main>
+              <Footer />
+            </div>
           </AuthProvider>
         </ThemeProvider>
       </body>

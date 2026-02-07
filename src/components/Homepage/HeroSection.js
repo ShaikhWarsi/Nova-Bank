@@ -135,9 +135,8 @@ function HeroSection() {
             </div>
           </div>
         </div>
-
-        {isChatbotVisible && <CustomChatbot />}
       </div>
+      {isChatbotVisible && <CustomChatbot toggleChatbot={handleLiveChat} />}
 
       {/* Animated Scroll Down Indicator */}
       <motion.div

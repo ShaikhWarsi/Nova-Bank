@@ -8,9 +8,16 @@ export const AuthProvider = ({ children }) => {
 
   useEffect(() => {
     // Check if the user is logged in (e.g., by checking a cookie or local storage)
-    const session = JSON.parse(localStorage.getItem("session"));
-    if (session) {
-      setIsLoggedIn(true);
+    try {
+      const sessionData = localStorage.getItem("session");
+      if (sessionData) {
+        const session = JSON.parse(sessionData);
+        if (session) {
+          setIsLoggedIn(true);
+        }
+      }
+    } catch (error) {
+      console.error("Error parsing session from localStorage:", error);
     }
   }, []);
 
